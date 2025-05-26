@@ -1,0 +1,29 @@
+.uber{
+    border: 2px solid black;
+    background-color: black !important;
+    padding: 10px 20px;
+    color: white;
+   transition-duration: 0.2s;
+    font-weight: 300;
+    cursor: pointer;
+    border-radius: 1px;
+}
+.uber:hover{
+    opacity: 0.8;
+   background-color: rgba(0, 0, 0, 0.8);   
+}
+.amazon{
+    border: 2px solid rgb(224, 224, 3);
+    background-color: rgb(224, 224, 3) !important;
+    padding: 10px 55px;
+    border-radius: 30px;
+    color: black;
+   transition-duration: 0.2s;
+    font-weight: 700;
+    cursor: pointer;
+}
+.amazon:hover{
+    
+   background-color: rgba(235, 235, 2, 0.9);  
+    opacity: 0.8;
+}
