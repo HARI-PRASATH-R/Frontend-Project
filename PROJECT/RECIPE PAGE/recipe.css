@@ -1,0 +1,138 @@
+.back{
+    background-color: rgba(236, 203, 205, 0.8);
+}
+.back1{
+    background-color: rgb(245, 244, 243);
+    height: 100%;
+    width: 60%;
+    margin-left: 230px;
+    border-radius: 20px;
+     margin-top: 90px;
+     justify-content: center;
+     display: flex;
+     margin-bottom: 90px;
+}
+.img1{
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-left: 14px;
+    
+   
+}
+img{
+    width: 700px;
+    height: 380px;
+    border-radius: 20px;
+}
+.bebas-neue-regular h1{
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 800;
+  font-style:normal;
+ 
+}
+.h{
+
+    font-weight: 1000;
+    font-size: 40px;
+    margin-bottom: 0%;
+}
+.para{
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+font-style: normal;
+font-size: 15px;
+
+}
+
+.d{
+    width: 700px;
+    line-height: 25px;
+    font-weight: 500;
+    margin-left: 8px;
+    margin-top: 18px;
+ 
+}
+.d1{
+    background-color: rgba(252, 208, 215,0.3);
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 700;
+    color: rgb(177, 33, 100);
+    margin-top: 30px;
+    padding: 20px;
+    margin-bottom: 30px;
+    
+}
+.li{
+    margin-top: 20px;
+    font-weight: 700;
+    color: rgb(12, 12, 12);
+}
+.d1 li::marker{
+    color:rgb(177, 33, 100);
+}
+.sp{
+color: black;
+font-weight: 400;
+line-height: 25px;
+}
+.bebas-neue-regular.h2{
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 900;
+  font-style:normal; 
+}
+h2{
+      font-size: 40px;
+      color: rgb(131, 38, 38);
+      line-height: 25px;
+}
+.hp li::marker{
+    color:rgb(139, 29, 29);
+    font-weight: 800;
+}
+.hp{
+    line-height: 30px;
+    margin-left: -10px;
+    list-style-position: inside;
+    padding-left: 50px; 
+ 
+}
+ul li{
+    list-style-position:outside;
+    padding-left: 20px;
+}
+.hh{
+    font-weight: 700;
+}
+ol li{
+    list-style-position:outside;
+    padding-left: 20px;
+}
+.de{
+    margin-bottom: 30px;
+}
+.des{
+    margin-left: 30px;   
+}
+.des1{
+    font-weight: 700;
+    color: rgb(139, 29, 29);
+    margin-left:270px;
+}
+.des2{
+    font-weight: 700;
+    color: rgb(139, 29, 29);
+    margin-left:288px;
+}
+.des3{
+    font-weight: 700;
+    color: rgb(139, 29, 29);
+    margin-left:275px;
+}
+.des4{
+    font-weight: 700;
+    color: rgb(139, 29, 29);
+    margin-left:305px;
+}
+
+
