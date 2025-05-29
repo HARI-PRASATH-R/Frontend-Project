@@ -1,0 +1,47 @@
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  background-color: #f9f9f9;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(14, 40px);
+  grid-gap: 10px;
+}
+
+.block {
+  background-color: #9acd32;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.b1  {
+     grid-column: span 14; 
+    }
+.b2, .b3 { 
+    grid-column: span 7; 
+}
+.b4, .b6 {
+     grid-column: span 4; 
+    }
+.b5      {
+     grid-column: span 6; 
+    }
+.b7, .b10 { 
+    grid-column: span 3;
+ }
+.b8, .b9  {
+     grid-column: span 4;
+     }
+.b11, .b12, .b13, .b14, .b15, .b16 { 
+    grid-column: span 2; 
+}
+.b17, .b18, .b19, .b20, .b21, .b22, .b23, .b24, .b25, .b26, .b27, .b28 {
+     grid-column: span 1; 
+    }
