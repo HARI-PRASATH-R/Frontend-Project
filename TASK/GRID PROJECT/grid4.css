@@ -54,5 +54,7 @@ article img{
     article,.main-image{
         display: block;
         margin: 0 20px;
+        display: grid;
+        grid-template-columns: 1fr;
     }
 }
