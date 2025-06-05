@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fefefe;
+  color: #111;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #444;
+}
+
+.container {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+.main-content {
+  flex: 2;
+}
+
+.main-content h1 {
+  font-size: 28px;
+}
+
+.main-content button {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.sidebar {
+  flex: 1;
+  background: #0f172a;
+  color: white;
+  padding: 20px 40px;
+}
+strong{
+    line-height: 30px;
+    font-size: 20px;
+}
+.sidebar h2 {
+  color: #facc15;
+}
+
+.news-item {
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background: #fafafa;
+}
+
+.card {
+  width: 30%;
+
+  display: flex;
+}
+
+.card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.card h3 {
+  color: red;
+  margin: 10px 0 0;
+}
+.main-content img{
+    width: 900px;
+}
+.main-content button{
+    color: black;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 15px 30px;
+    letter-spacing: 2px;
+}
+.hp{
+    display:flex;
+}
+.hp p{
+    width: 600px;
+}
+.hp h1{
+    font-size: 50px;
+    font-weight: 800;
+    width: 300px;
+    margin-top: 20px;
+}
+.hp2{
+    display: block;
+    margin-left: 100px;
+    
+}
+.hp2 p{
+    margin-top: 25px;
+    width: 400px;
+    line-height: 30px;
+}
+.hs{
+    
+    padding: 0;
+margin: 0;
+}
