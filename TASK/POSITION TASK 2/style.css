@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  background: #f0f0f0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.bell {
+  position: relative;
+  font-size: 50px;
+}
+
+.badge {
+  position: absolute;
+  top:10px;
+  right: 8px;
+  background: red;
+  color: white;
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 18px;
+}
