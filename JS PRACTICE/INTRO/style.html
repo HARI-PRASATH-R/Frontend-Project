@@ -44,7 +44,7 @@
 
     const person={
         name: "HARI",
-        dept: "IT",
+        sec: "IT",
         phNo: "9087654321",
     }
     person.email="hari@gmail.com";
@@ -55,6 +55,27 @@
     fruits.push("pear");
     console.log(fruits);
     console.log("Index no: " + fruits.indexOf("graps"));
+
+    const funct = (a,b) => {
+        return a+b;
+    };
+    console.log(funct(10,20));
+
+    const indtoducer = (name,sec) =>{
+         const person1 = {
+            name: name,
+            sec: sec,
+            dept: 50000,
+            assert: 200000,
+            networth:function (){
+                return this.assert - this.dept;
+
+            },
+         };
+    
+    let semtence = `Hi, I'm ${person1.name}.I'm stydied in ${person1.sec} section. and my networth is ${person1.nertworth()}`;
+    return semtence;
+    };
 
     </script>
 </body>

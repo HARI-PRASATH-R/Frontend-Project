@@ -1,0 +1,42 @@
+*{
+    padding:0;
+    margin:0;
+}
+.container{
+    width:100%;
+    height: 600px;
+    background-color:rgb(252, 252, 252);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.togbtn{
+    width: 200px;
+    height: 100px;
+    background-color: rgb(253, 2, 2);
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.togbtn::before{
+    content: "";
+    width: 90px;
+    height: 90px;
+    background-color:white;
+    border-radius: 200px;
+    position:absolute;
+    margin:5px;
+    transition: 0.3s;
+   box-shadow: 5px 10px 10px rgba(0,0,0,0.3);
+}
+
+input{
+    display: none;
+}
+input:checked+.togbtn{
+    background-color: rgb(13, 185, 13);
+}
+input:checked+.togbtn::before{
+    transform: translateX(100px);
+}
