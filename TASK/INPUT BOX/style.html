@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>NAME :</h3> 
+    <input type="text" onkeydown="event">
+    <button onclick="handlekey()">ENTER</button>
+    <p class="result"></p>
+
+    <script>
+        function handlekey(event){
+            let key = event.key;
+
+            document.querySelector('result').innerHTML = key;
+        }
+    </script>
+</body>
+</html>
