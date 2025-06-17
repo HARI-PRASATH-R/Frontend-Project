@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#hp{
+    height: 100px;
+    width: 100px;
+    animation-name:color;
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
+    font-size: 16rem;
+}
+
+@keyframes color{
+    0%{
+        color: red;
+    }10%{
+         color: rgb(3, 132, 252);
+    }
+    20%{
+         color: rgb(24, 252, 3);
+    }30%{
+         color: rgb(252, 227, 3);
+    }
+    40%{
+         color: rgb(252, 3, 157);
+    }50%{
+         color: rgb(2, 20, 1);
+    }
+    60%{
+         color: rgb(3, 215, 252);
+    }70%{
+         color: rgb(82, 26, 19);
+    }
+    80%{
+         color: rgb(24, 252, 3);
+    }90%{
+         color: rgb(19, 87, 87);
+    }
+    100%{
+         color: blue;
+    }
+    
+}

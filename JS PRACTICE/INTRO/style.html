@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
+    <script src="./style.js">
 
     let val = 6;
     val = 5;
@@ -73,10 +73,54 @@
             },
          };
     
-    let semtence = `Hi, I'm ${person1.name}.I'm stydied in ${person1.sec} section. and my networth is ${person1.nertworth()}`;
-    return semtence;
+    let sentence = `Hi, I'm ${person1.name}.I'm stydied in ${person1.sec} section. and my networth is ${person1.nertworth()}`;
+    return sentence;
     };
 
+    let product = {
+        name: "HARI",
+        age: "18",
+        dept: "IT"
+    };
+    console.log(product);
+
+    let productDetails = [
+        {
+        name: "mobile",
+        price: "50,000",
+        model: "samsung"
+        },
+         {
+        name: "bike",
+        price: "60,000",
+        model: "S100 RR"
+        },
+        {
+        name: "car",
+        price: "5,00,000",
+        model: "BMW M4"
+        }
+    ]
+    productDetails.map((product) => console.log(product))
+
+     let list = [1,2,3,4,5];
+     let newList = list.map((lists) => lists*2 );
+     console.log(newList);
+
+       let details = {
+        name : "kathir",
+        age : 19,
+        frds (){
+           console.log("ramu");
+        }
+       }
+ console.log(details.frds());
+       console.log(details.frds.name);
+       let {name} = details; // name = details.name;
+       console.log("details mes : ",name);
+
     </script>
+<h1>INSTAGRAM</h1>
+    <button class="hp" onclick="follow()">FOLLOW</button>
 </body>
 </html>

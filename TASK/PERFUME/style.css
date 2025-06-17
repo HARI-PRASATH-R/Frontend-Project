@@ -1,0 +1,77 @@
+ *{
+    margin: 0%;
+    padding: 0%;
+     font-family: "Montserrat", sans-serif;
+    font-style: normal;
+     Weight: 500;
+ }
+ body{
+      background-color: antiquewhite;
+     display: flex;
+     justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+ }
+ .main-container{
+    
+    width: 40rem;
+    height: 500px;
+    display: flex;
+ }
+.hs img{
+    width: 20rem;
+    height: 500px;
+    border-top-left-radius:10px ;
+    border-bottom-left-radius: 10px;
+ }
+ .hp{
+     width: 20rem;
+    height: 430px;
+    background-color: white;
+  border-top-right-radius:10px ;
+  border-bottom-right-radius: 10px;
+  padding: 30px;
+ }
+
+ .para{
+    letter-spacing: 10px;
+    font-size: 12px;
+    margin-bottom: 15px;
+ }
+ .hp h1{
+    font-family: "Fraunces", serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    margin-bottom: 20px;
+    
+ }
+ .par{
+   display: flex;
+ }
+ h2{
+    font-family: "Fraunces", serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+   color: hsl(158, 41%, 28%);
+ }
+ .hp p{
+    line-height: 29px;
+    margin-bottom: 20px;
+   
+ }
+ .ss{
+    margin-left: 30px;
+ }
+ .cart{
+    padding: 15px 35px;
+    background-color: hsl(158, 41%, 28%);
+    font-weight: 600;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin-left: 50px;
+ }
+ 
