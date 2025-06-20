@@ -1,8 +1,8 @@
 let people = 2;
 
     function calculate() {
-      const bill = parseFloat(document.getElementById("bill").value);
-      const tip = parseFloat(document.getElementById("tip").value);
+      const bill = Number(document.getElementById("bill").value);
+      const tip = Number(document.getElementById("tip").value);
       const total = bill + (bill * tip / 100);
       const perPerson = total / people;
       document.getElementById("result").innerHTML = "$" + perPerson.toFixed(2);

@@ -7,16 +7,23 @@
 </head>
 <body>
     <h3>NAME :</h3> 
-    <input type="text" onkeydown="event">
-    <button onclick="handlekey()">ENTER</button>
+
+    <input type="text" onkeyup=" document.querySelector('.result').innerHTML = value;" >
+    <button onclick="enter()">ENTER</button>
     <p class="result"></p>
+    <p class="result1"></p>
 
     <script>
-        function handlekey(event){
-            let key = event.key;
+      
 
-            document.querySelector('result').innerHTML = key;
-        }
+function enter(){
+    let input = document.querySelector('input').value ;
+    console.log(input)
+    pass(input);
+}
+function pass(value){
+    document.querySelector('.result1').innerHTML = value;
+}
     </script>
 </body>
 </html>

@@ -1,7 +1,10 @@
 body{
     margin: 0;
     padding: 0;
-    display: flex;
+   
+}
+.container{
+      display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -46,4 +49,25 @@ body{
          color: blue;
     }
     
+}
+
+.load{
+     border: 1rem solid rgb(7, 7, 7);
+     border-top: 1rem solid red;
+     border-radius: 50%;
+     width: 100px;
+     height: 100px;
+     animation-name:round;
+     animation-duration: 0.7s;
+     animation-iteration-count: infinite;
+     animation-timing-function: linear;
+
+}
+@keyframes round{
+     from{
+          transform: rotate(0deg);
+     }
+     to{
+           transform: rotate(360deg);
+     }
 }
