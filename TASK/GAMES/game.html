@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  
+  <style>
+    html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin:0;
+}
+.wrapper {
+  background: #1c1c1c;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+button {
+  height: 100px;
+  width: 100px;
+  font-size: 48px;
+  border-radius: 30px;
+  cursor: pointer;  
+}
+.resultContainer {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 20px;
+}
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+  <div class="buttons">
+    <button class="rpsButton" value="Rock">✊</button>
+    <button class="rpsButton" value="Paper">🤚</button>
+    <button class="rpsButton" value="Scissor">✌</button>
+  </div>
+  <div class="resultContainer">
+  <div id="player-score"></div>
+  <div id="hands"></div>
+  <div id="results"></div>
+  <button id='endGameButton'>🔴</button>
+  </div>
+  </div>
+  
+  <script>
+    Percentage=0;
+    let element = document.querySelectorAll('.rpsButton');
+   
+    element.forEach((btn)=>{
+        btn.onclick =()=>{
+           let userChose = btn.value;
+
+computerChose(userChose);
+        };
+    });
+
+    function computerChose(userChose){
+        let chose = ['Rock','Paper','Scissor'];
+        let randomVal = Math.floor(Math.random()*3);
+        let computer = chose[randomVal];
+
+let finalValue = `Yr Choise is :${userChose}.Computer Choise is :${computer}`;
+
+       let final = result(userChose,computer);
+       if(final === 0){
+        document.getElementById('results').innerHTML = "tie";
+        document.getElementById('hands').innerHTML =finalValue;
+         document.getElementById('player-score').innerHTML = Percentage;
+
+       }
+       else if(final === 1){
+        document.getElementById('results').innerHTML = "You win";
+         document.getElementById('hands').innerHTML =finalValue;
+          document.getElementById('player-score').innerHTML = ++Percentage;
+       }
+       else{
+        document.getElementById('results').innerHTML = "You loss";
+         document.getElementById('hands').innerHTML =finalValue;
+          document.getElementById('player-score').innerHTML = --Percentage;
+       }
+    }
+    
+    function result(userChose,computerChose){
+        if(userChose === computerChose){
+            return 0;
+
+        }
+        else if((userChose ==="Rock" && computerChose === "Scissor") || (userChose ==="Paper" && computerChose === "Rock")||(userChose ==="Scissor" && computerChose === "Paper")){
+            return 1;
+        }
+        else{
+            return -1;
+        }
+    }
+  </script>
+</body>
+
+</html>
