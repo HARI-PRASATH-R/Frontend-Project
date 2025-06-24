@@ -63,7 +63,7 @@ button {
    
     element.forEach((btn)=>{
         btn.onclick =()=>{
-           let userChose = btn.value;
+            userChose = btn.value;
 
 computerChose(userChose);
         };
@@ -72,7 +72,7 @@ computerChose(userChose);
     function computerChose(userChose){
         let chose = ['Rock','Paper','Scissor'];
         let randomVal = Math.floor(Math.random()*3);
-        let computer = chose[randomVal];
+         computer = chose[randomVal];
 
 let finalValue = `Yr Choise is :${userChose}.Computer Choise is :${computer}`;
 
@@ -93,6 +93,7 @@ let finalValue = `Yr Choise is :${userChose}.Computer Choise is :${computer}`;
          document.getElementById('hands').innerHTML =finalValue;
           document.getElementById('player-score').innerHTML = --Percentage;
        }
+        
     }
     
     function result(userChose,computerChose){
@@ -106,7 +107,21 @@ let finalValue = `Yr Choise is :${userChose}.Computer Choise is :${computer}`;
         else{
             return -1;
         }
+  
+    
     }
+   let endGame = document.getElementById('endGameButton');
+
+   endGame.onclick=()=>{
+ 
+     document.getElementById('results').innerHTML = "LET'S START";
+         document.getElementById('hands').innerHTML ='';
+          document.getElementById('player-score').innerHTML = 0;
+    }
+  
+   
+   
+
   </script>
 </body>
 

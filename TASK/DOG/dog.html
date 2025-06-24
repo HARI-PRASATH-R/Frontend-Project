@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    #dog-button{
+       padding:10px 15px ;
+       font-weight: 700;
+       border-radius: 20px;
+       background-color: blueviolet;
+       border: none;
+       color: white;
+    }
+</style>
+<body>
+    <button id="dog-button">GET DOG IMAGE</button>
+    <div id="main-div"></div>
+</body>
+<script>
+    let divElement = document.getElementById("main-div");
+    let buttonElement = document.getElementById("dog-button");
+    const URL = "https://dog.ceo/api/breeds/image/random";
+buttonElement.onclick=()=>{
+fetch(URL).then(response=>response.json()).then(json=>(divElement.innerHTML=`<img src="${json.message}" width="300px" height="300px   ">`));
+}
+
+</script>
+</html>

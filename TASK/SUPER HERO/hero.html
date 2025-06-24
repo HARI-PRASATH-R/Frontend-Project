@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="input-box">
+    <button class="user-button">SEARCH</button>
+    <button class="hero-button">GENERATE HERO</button>
+    <div class="main"></div>
+</body>
+<script>
+
+    const ACCESS_TOKEN = "10223569763528853";
+    const URL = ` https://www.superheroapi.com/api.php/${ACCESS_TOKEN}`;
+
+let inputButton = document.querySelector('.input-box');
+
+let searchButton = document.querySelector('.user-button');
+
+let buttonElement = document.querySelector('.hero-button');
+let divElement = document.querySelector('.main');
+searchButton.onclick=()=>{
+    
+fetch(`${URL}/search/${inputButton.value}`).then(response=>response.json()).then(json=>(divElement.innerHTML=`<img src="${json.results[0].image.url}" width =300 heigth=300><h2>Name : ${json.results[0].name}</h2><p>Intelligence : ${json.results[0].powerstats.intelligence}</p><p>Strength : ${json.results[0].powerstats.strength}</p><p>Speed : ${json.results[0].powerstats.speed}</p><p>Durability : ${json.results[0].powerstats.durability}</p><p>Power : ${json.results[0].powerstats.power}</p><p>Combat : ${json.results[0].powerstats.combat}</p>`));
+}
+   
+   
+    buttonElement.onclick=()=>{
+        
+        
+    fetch(`${URL}/${Random()}`).then(response=>response.json()).then(json=>(divElement.innerHTML=`<img src="${json.image.url}" width =300 heigth=300><h2>Name : ${json.name}</h2><p>Intelligence : ${json.powerstats.intelligence}</p><p>Strength : ${json.powerstats.strength}</p><p>Speed : ${json.powerstats.speed}</p><p>Durability : ${json.powerstats.durability}</p><p>Power : ${json.powerstats.power}</p><p>Combat : ${json.powerstats.combat}</p>`));
+    }
+function Random(){
+
+    let randomElement = Math.floor(Math.random()*731)+1;
+    return randomElement;  
+}
+Random();
+
+
+</script>
+</html>

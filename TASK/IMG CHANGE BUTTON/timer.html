@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IMAGE CHANGE BUTTON</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background:color-mix(in hsl shorter hue, black 10%, blue 10%);
+    }
+
+    .container {
+      position: relative;
+      width: 400px;
+      height: 250px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 5px 4px 10px rgba(0,0,0,0.2);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      animation-name: round;
+    }
+
+    .button {
+      position: absolute;
+      top: 50%;
+     
+      background: black;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      font-size: 18px;
+      cursor: pointer;
+      z-index: 1;
+      opacity: 0.7;
+    }
+
+    .one {
+      left: 10px;
+    }
+
+    .two {
+      right: 10px;
+    }
+    @keyframes round{
+      from{
+        transform: translateX(0dec);
+      }
+      to{
+        transform: translateY(180dec);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <button class="button one" onclick="preImage()"><<</button>
+  <img id="carImage" src="car5.jpg">
+  <button class="button two" onclick="nextImage()">>></button>
+</div>
+
+<script>
+  const images = ['car5.jpg', 'car6.jpg', 'car7.jpeg', 'car8.jpeg'];
+  let currentIndex = 0;
+  const carImage = document.getElementById('carImage');
+
+  function showImage(index) {
+    carImage.src = images[index];
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  }
+
+  function preImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  }
+</script>
+
+</body>
+</html>
