@@ -31,8 +31,28 @@
      
     }
 
+    .button {
+      position: absolute;
+      top: 50%;     
+      background: black;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      font-size: 18px;
+      cursor: pointer;
+      z-index: 1;
+      opacity: 0.7;
+    }
 
+    .one {
+      left: 10px;
+    }
 
+    .two {
+      right: 10px;
+    }
 
 
   </style>
@@ -40,20 +60,25 @@
 <body>
 
 <div class="container">
- 
+  <button class="button one" onclick="preImage()"><<</button>
   <img id="carImage" src="car7.jpeg">
-  
+  <button class="button two" onclick="nextImage()">>></button>
+</div>
 
 <script>
   const images = ['car5.jpg', 'car6.jpg', 'car7.jpeg', 'car8.jpeg'];
-  let currentIndex =0;
+  let currentIndex = 0;
   const carImage = document.getElementById('carImage');
 
-setInterval(()=>{
+for(let i=0;i<images.length;i++){
+   const timer = setTimeout(()=> {
   
-  currentIndex=(currentIndex + 1) % images.length;
- carImage.src = images[currentIndex];
-},2000);
+   currentIndex = (currentIndex + i)%images.length;
+    carImage.src = images[index];
+}, 1000);
+
+}
+
 </script>
 
 </body>
