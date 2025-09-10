@@ -25,15 +25,15 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: 0.1s;
       animation-name: round;
-      animation-timing-function:ease-in;
-     
+      transition: 0.3s;
+      animation-timing-function: ease-in-out 0.3;
     }
 
     .button {
       position: absolute;
-      top: 50%;     
+      top: 50%;
+     
       background: black;
       color: white;
       border: none;
@@ -53,15 +53,23 @@
     .two {
       right: 10px;
     }
-
-
+    @keyframes round{
+      from{
+        transform: translateX(0dec);
+        opacity: 0.6;
+      }
+      to{
+        transform: translateX(180dec);
+        opacity: 0.6;
+      }
+    }
   </style>
 </head>
 <body>
 
 <div class="container">
   <button class="button one" onclick="preImage()"><<</button>
-  <img id="carImage" src="car7.jpeg">
+  <img id="carImage" src="car5.jpg">
   <button class="button two" onclick="nextImage()">>></button>
 </div>
 
@@ -70,15 +78,19 @@
   let currentIndex = 0;
   const carImage = document.getElementById('carImage');
 
-for(let i=0;i<images.length;i++){
-   const timer = setTimeout(()=> {
-  
-   currentIndex = (currentIndex + i)%images.length;
+  function showImage(index) {
     carImage.src = images[index];
-}, 1000);
+  }
 
-}
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  }
 
+  function preImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  }
 </script>
 
 </body>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Fighter</title>
+  <link href="fighter.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  
+  <br>
+  
+  <div class="menu">
+    <div class="p1Info">
+
+      <div id="p1Name">Player 1</div>
+      
+      <img 
+      id="p1" 
+      src="https://i.gifer.com/origin/00/0019f6845ceaa9347b881ccbe8f5644a_w200.gif"
+      />
+      
+      <div class="playerControls">
+
+        <div class="AttackDiv">
+          <h3>Q:</h3>
+          <button 
+            onclick = "player1.strike(player1, player2, player1.attackDmg)"  
+            id="attack"
+          >
+            Attack
+          </button>
+        </div>
+
+        <div class="HealDiv">
+          <h3>A:</h3>
+          <button 
+            onclick = "player1.heal(player1)" 
+            id="heal"
+          >
+            Heal
+          </button>
+          </div>
+      </div>
+      
+      <div  id="p1Health">100</div>
+    </div>
+
+      <button id="play">Simulate</button>
+
+    <div class="p2Info">
+
+      <div id="p2Name">Player 2</div>
+      
+      <img 
+        id="p2" 
+        src="https://i.pinimg.com/originals/4c/97/4d/4c974db3347daac677cf6588d8f4598b.gif"
+      />
+      <div class="playerControls">
+        <div class="AttackDiv">
+          <h3>P:</h3>
+          <button 
+            onclick = "player2.strike(player2, player1, player2.attackDmg)"  
+            id="attack"
+          >
+            Attack
+          </button>
+        </div>
+        <div class="HealDiv">
+          <h3>L:</h3>          
+          <button 
+            onclick = "player2.heal(player2)" 
+            id="heal"
+          >
+            Heal
+          </button>
+        </div>
+      </div>
+      
+      <div id="p2Health">100</div>
+    </div>
+
+  </div>
+  <br>
+  
+  <div class="resultContainer">
+      <div id="result"></div>
+      <button id="reset" onclick="game.reset(p1,p2)">Reset</button>
+  </div>
+
+<audio id="p1attack" controls style="display:none">
+  <source src="sounds/fastpunch.mp3" type="audio/mpeg"> 
+</audio>
+<audio id="p1heal" controls style="display:none">
+  <source src="sounds/fastheal.mp3" type="audio/mpeg"> 
+</audio>
+<audio id="p2attack" controls style="display:none">
+  <source src="sounds/quickhit.mp3" type="audio/mpeg"> 
+</audio>
+<audio id="p2heal" controls style="display:none">
+  <source src="sounds/quickheal.mp3" type="audio/mpeg"> 
+</audio>
+<audio id="victory" controls style="display:none">
+  <source src="sounds/victory.mp3" type="audio/mpeg"> 
+</audio>
+
+  <script>
+let playButton = document.getElementById("play");
+let resultDiv = document.getElementById("result");
+let p1NameDiv = document.getElementById("p1Name");
+let p2NameDiv = document.getElementById("p2Name");
+let p1HealthDiv = document.getElementById("p1Health");
+let p2HealthDiv = document.getElementById("p2Health");
+
+function updateElement(p1, p2) {
+  p1NameDiv.innerText = p1.name;
+  p2NameDiv.innerText = p2.name;
+  p1HealthDiv.innerText = p1.health;
+  p2HealthDiv.innerText = p2.health;
+}
+
+class Player {
+  constructor(name, health, attackDamage) {
+    this.name = name;
+    this.health = health;
+    this.attackDamage = attackDamage;
+  }
+
+  strike(player, enemy) {
+    let random = Math.ceil(Math.random() * player.attackDamage);
+
+    enemy.health = enemy.health - random;
+    
+  }
+
+  heal(player) {
+    let random = Math.ceil(Math.random() * 5);
+
+    player.health += random;
+  }
+}
+
+let player1 = new Player("Kathir", 100, 10);
+let player2 = new Player("Ashwinth", 100, 10);
+
+document.addEventListener("keydown", (event) => {
+  let key = event.key;
+
+  if (key === "q") {
+    player1.strike(player1, player2);
+    updateElement(player1, player2);
+    document.getElementById("p1attack").play();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  let key = event.key;
+
+  if (key === "p") {
+    player2.strike(player2, player1);
+    updateElement(player1, player2);
+    document.getElementById("p2attack").play();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  let key = event.key;
+
+  if (key === "a") {
+    player1.heal(player1);
+    updateElement(player1, player2);
+    document.getElementById("p1heal").play();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  let key = event.key;
+
+  if (key === "l") {
+    player2.heal(player2);
+    updateElement(player1, player2);
+    document.getElementById("p2heal").play();
+  }
+});
+
+updateElement(player1, player2);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="weather.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Weather</h1>
+   <div class="input"><input type="text" id="cityInput" placeholder="Enter the City Name" />
+    <button id="searchBtn">Search</button></div> 
+    <div class="weather-card">
+      <div class="city" id="cityName"></div>
+      <div class="condition" id="weatherCondition">Clouds</div>
+      <div class="temps">
+        <p id="temp"></p>
+        <p id="minTemp"></p>
+        <p id="maxTemp"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+   
+   function getDatas(){
+    const cityName = document.getElementById('cityName');
+    const temp = document.getElementById('temp');
+    const mintemp = document.getElementById('minTemp');
+    const maxTemp = document.getElementById('maxTemp');
+   }
+async function weatherData() {
+  
+    const url = 'https://openweather43.p.rapidapi.com/weather?appid=da0f9c8d90bde7e619c3ec47766a42f4&q=tiruppur&units=standard';
+const options = {
+	method: 'GET',
+	headers: {
+		'x-rapidapi-key': '460d5a04bamshfe070817fe3e204p1e154cjsnd5c838b21b42',
+		'x-rapidapi-host': 'openweather43.p.rapidapi.com'
+	}
+};
+if(!city){
+  alret()
+}
+
+try {
+	const response = await fetch(url, options);
+	const result = await response.text();
+	console.log(result);
+} catch (error) {
+	console.error(error);
+}}
+  </script>
+</body>
+</html>

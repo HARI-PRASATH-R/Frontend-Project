@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+class Bank{
+
+     constructor(totalAmount){
+    this.totalAmount = totalAmount;
+    
+    
+     }
+
+     
+     withdraw(withdraw){
+       this.totalAmount = this.totalAmount-withdraw;
+       console.log(`Balance amount is : ${this.totalAmount}`)
+     }
+     deposit(depositAmount){
+        this.totalAmount = this.totalAmount+depositAmount;
+        nsole.log(`Balance amount is :${this.totalAmount}`)
+        
+        
+     }
+    
+
+
+}
+
+let withdrawAmt = prompt("Enter your withdraw amount");
+let SBI = new Bank(10000);
+SBI.withdraw(withdrawAmt);
+alert("Total Amount : "+SBI.totalAmount)
+let depo = prompt("Enter your deposit Amount");
+SBI.deposit(depo);
+alert("Total Amount : "+SBI.totalAmount)
+
+
+</script>
+</html>
